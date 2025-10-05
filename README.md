@@ -18,20 +18,25 @@
    - Duplique o arquivo `.env.example` e renomeie para `.env`
    - Abra o arquivo `.env` e substitua os valores pelas suas chaves de API reais, pelos modelos de embedding e LLM que pretende utilizar e pelo caminho do PDF no sistema de arquivos.
 
-3. **Executar o seguinte comando no terminal para criar o container Docker:**
+3. **Iniciar container Docker:**
+
+   Executar o seguinte comando no terminal para criar/iniciar o container Docker:
 
    ```bash
    docker compose up -d
    ```
 
-4. **Acessar a raiz do projeto e executar o seguinte comando:**
+4. **Realizar a ingestão do arquivo PDF no banco de dados:**
+
+   Acesse a raiz do projeto e execute o seguinte comando:
 
    ```bash
    python3 .\src\ingest.py
    ```
-   - Esse script fará a ingestão do PDF no banco de dados.
 
-4. **Em seguida, executar o seguinte comando:**
+4. **Habilitar chat do modelo:**
+
+   Execute o seguinte comando:
 
    ```bash
    python3 .\src\chat.py
