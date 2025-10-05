@@ -36,12 +36,12 @@
    ```bash
    python3 .\src\chat.py
    ```
-   - Esse script habilitará um prompt para que seja feita uma pergunta para o modelo. As perguntas devem ser feitas com base no conteúdo do PDF "document.pdf".
+   Esse script habilitará um prompt para que seja feita uma pergunta para o modelo. As perguntas devem ser feitas com base no conteúdo do PDF "document.pdf".
 
    Exemplos:
       - Qual o faturamento da empresa Alfa Turismo S. A.?
       - Quais empresas possuem um faturamento superior a R$ 100.000.000,00?
 
-   - Perguntas feitas fora do contexto do conteúdo existente no PDF não deverão ser respondidas.
+   Perguntas feitas fora do contexto do conteúdo existente no PDF não deverão ser respondidas.
 
-   - Para cada nova pergunta, executar o script chat.py novamente.
+   Para cada nova pergunta, executar o script chat.py novamente.
