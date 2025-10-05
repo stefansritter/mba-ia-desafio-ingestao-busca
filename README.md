@@ -18,22 +18,30 @@
    - Duplique o arquivo `.env.example` e renomeie para `.env`
    - Abra o arquivo `.env` e substitua os valores pelas suas chaves de API reais, pelos modelos de embedding e LLM que pretende utilizar e pelo caminho do PDF no sistema de arquivos.
 
-4. **Acesse a raiz do projeto e execute o seguinte comando:**
+3. **Executar o seguinte comando no terminal para criar o container Docker:**
+
+   ```bash
+   docker compose up -d
+   ```
+
+4. **Acessar a raiz do projeto e executar o seguinte comando:**
 
    ```bash
    python3 .\src\ingest.py
    ```
    - Esse script fará a ingestão do PDF no banco de dados.
 
-4. **Em seguida, execute o seguinte comando:**
+4. **Em seguida, executar o seguinte comando:**
 
    ```bash
    python3 .\src\chat.py
    ```
-   - Esse script habilitará um chat para que seja feita uma pergunta para o modelo. As perguntas devem ser feitas com base no conteúdo do PDF "document.pdf".
+   - Esse script habilitará um prompt para que seja feita uma pergunta para o modelo. As perguntas devem ser feitas com base no conteúdo do PDF "document.pdf".
 
    Exemplos:
       - Qual o faturamento da empresa Alfa Turismo S. A.?
       - Quais empresas possuem um faturamento superior a R$ 100.000.000,00?
 
-   Perguntas feitas fora do contexto do conteúdo existente no PDF não deverão ser respondidas.
+   - Perguntas feitas fora do contexto do conteúdo existente no PDF não deverão ser respondidas.
+
+   - Para cada nova pergunta, executar o script chat.py novamente.
